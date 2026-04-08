@@ -1,12 +1,6 @@
 #include <stdio.h>
 int main (void)
 {
-  int staffid;
-  
-  printf("Enter your ID.");
-  scanf("%d", &staffid);
-  printf("Your id is correct.");
-
-  printf("kerfrjfgdj");
+  printf("Hello World");
   return 0;
 }
