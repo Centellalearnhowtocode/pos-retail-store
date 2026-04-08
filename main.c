@@ -7,5 +7,6 @@ int main (void)
   scanf("%d", &staffid);
   printf("Your id is correct.");
 
+  printf("Your password is 333");
   return 0;
 }
