@@ -1,0 +1,36 @@
+/* The background of the whole window */
+window {
+    background-color: #003049; 
+    border-radius: 20px; /* Gives the window rounded corners */
+}
+
+/* The "Retail Store POS" text */
+#pos-title {
+    color: #8ecae6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* The Input Box */
+#pos-input {
+    background-color: #fefae0;
+    border-radius: 8px;
+    padding: 8px;
+    color: #333;
+}
+
+/* The Green Login Button */
+#btn-login {
+    background-color: #7fb069;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* The Red Logout Button */
+#btn-logout {
+    background-color: #c1121f;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
