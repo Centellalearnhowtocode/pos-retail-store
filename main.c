@@ -1,7 +1,11 @@
 #include <stdio.h>
 int main (void)
 {
-  printf("Centella");
-  printf("\nWhat is even this");
+  int staffid;
+  
+  printf("Enter your ID.");
+  scanf("%d", &staffid);
+  printf("Your id is correct.");
+
   return 0;
 }
