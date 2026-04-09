@@ -13,7 +13,7 @@ window {
 
 /* The Input Box */
 #pos-input {
-    background-color: #fefae0;
+    background: #fefae0;
     border-radius: 8px;
     padding: 8px;
     color: #333;
@@ -21,7 +21,7 @@ window {
 
 /* The Green Login Button */
 #btn-login {
-    background-color:#7fb069;
+    background:#7fb069;
     color: black;
     border-radius: 10px;
     font-weight: bold;
@@ -29,7 +29,7 @@ window {
 
 /* The Red Logout Button */
 #btn-logout {
-    background-color:#c1121f;
+    background:#c1121f;
     color: black;
     border-radius: 10px;
     font-weight: bold;
