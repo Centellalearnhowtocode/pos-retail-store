@@ -1,1 +1,8 @@
 GTK3-CSS-C Program
+
+GTK3 develop step:
+1. Open Mysys 2 Paste this: pacman -S mingw-w64-ucrt-x86_64-toolchain base-devel
+2.then change to UCRT64 then paste directory of the code folder /d/ITE/Year 1/Semester 1/CF-Computer Fundemental/POS final project/pos-retail-store/Coding Space
+3. compile: gcc main.c -o my_app $(pkg-config --cflags --libs gtk+-3.0)
+**main.c can be variable to the file name
+4. ./my_app
