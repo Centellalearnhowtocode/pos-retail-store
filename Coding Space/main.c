@@ -13,17 +13,20 @@ static void activate(GtkApplication* app, gpointer user_data) {
     gtk_container_add(GTK_CONTAINER(window), main_box);
     gtk_container_set_border_width(GTK_CONTAINER(main_box), 25);
 
-    // 1. The Title
+    // The Title
     title = gtk_label_new("Retail Store POS");
     gtk_widget_set_name(title, "pos-title");
     gtk_box_pack_start(GTK_BOX(main_box), title, FALSE, FALSE, 0);
 
-    // 2. The Input 
+    //  The Input 
     input_field = gtk_entry_new();
     gtk_widget_set_name(input_field, "pos-input");
     gtk_box_pack_start(GTK_BOX(main_box), input_field, FALSE, FALSE, 0);
 
-    // 3. The Button Row (Horizontal)
+    // Staff ID
+    input_field = gtk_label_new("Staff ID");
+
+    // The Button Row (Horizontal)
     button_row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
     gtk_box_pack_start(GTK_BOX(main_box), button_row, FALSE, FALSE, 0);
 

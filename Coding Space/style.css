@@ -22,16 +22,16 @@ window {
 /* The Green Login Button */
 #btn-login {
     background:#7fb069;
-    color: black;
-    border-radius: 10px;
+    color: #003049;
+    border-radius: 8px;
     font-weight: bold;
 }
 
 /* The Red Logout Button */
 #btn-logout {
     background:#c1121f;
-    color: black;
-    border-radius: 10px;
+    color: #003049;
+    border-radius:8px;
     font-weight: bold;
 }
 

@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/** pkg-config --cflags-only-I gtk+-3.0"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
