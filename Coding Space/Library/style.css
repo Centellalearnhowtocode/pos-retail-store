@@ -1,0 +1,29 @@
+window {
+  background: #003049; /* Dark Navy Blue */
+}
+
+#pos-title {
+    color: #8ecae6; /*Blue Sky*/
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#pos-input {
+    background: #fefae0; /* Creamy White */
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+#btn-login {
+    background:#7fb069; /* Green */
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#btn-logout {
+    background:#c1121f; /* Red */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;}
