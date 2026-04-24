@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int main(){
     int op;
     int id[20];
@@ -19,7 +20,7 @@ int main(){
         printf("successfully login\n");
     }else{
         printf("Wrong code\n");
-        exit(0);
+        return 0;
     }
     do{
 
@@ -36,6 +37,7 @@ int main(){
 
     switch (op){
         case 1:{
+
             printf("<<==============================================>>\n");
             printf("||               Menu of mart                   ||\n");
             printf("<<==============================================>>\n");
@@ -46,8 +48,12 @@ int main(){
             printf("<<==============================================>>\n");
             
             printf("Enter your menu you want to add :");
-            scanf("%s", name[n]);
-                if(name=="cake"){
+            scanf("%s", name[0]);
+            printf("Enter your number of men you want");
+            scanf("%d", &n);
+            
+            for(int i=0; i<n; i++){
+                if(strcmp(name[0], "cake") == 0){
                     printf("<<========================================>>\n");
                     printf("||               Menu of cake             ||\n");
                     printf("<<========================================>>\n");
@@ -57,8 +63,8 @@ int main(){
                     printf("|| . Add Tea                              ||\n");
                     printf("<<========================================>>\n");
                     printf("Enter your menu you want to add :");
-                    scanf("%s", cake[n]);
-                }else if(name=="drink"){
+                    scanf("%s", cake[i]);
+                }else if(strcmp(name[0], "drink") == 0){
                     printf("<<========================================>>\n");
                     printf("||               Menu of drink            ||\n");
                     printf("<<========================================>>\n");
@@ -68,8 +74,8 @@ int main(){
                     printf("|| . MachaLatte 2.5$                      ||\n");
                     printf("<<========================================>>\n");
                     printf("Enter your menu you want to add :");
-                    scanf("%s", drink[n]);
-                }else if(name=="snack"){
+                    scanf("%s", drink[i]);
+                }else if(strcmp(name[0], "snack") == 0){
                     printf("<<========================================>>\n");
                     printf("||               Menu of snack            ||\n");
                     printf("<<========================================>>\n");
@@ -80,8 +86,8 @@ int main(){
                     printf("|| . Burger 2.5$                          ||\n");
                     printf("<<========================================>>\n");
                     printf("Enter your menu you want to add :");
-                    scanf("%s", snack[n]);   
-                }else if(name=="ice cream"){
+                    scanf("%s", snack[i]);   
+                }else if(strcmp(name[0], "ice cream") == 0){
                     printf("<<========================================>>\n");
                     printf("||               Menu of ice cream        ||\n");
                     printf("<<========================================>>\n");
@@ -91,13 +97,17 @@ int main(){
                     printf("|| . Matcha 2$                            ||\n");
                     printf("<<========================================>>\n");
                     printf("Enter your menu you want to add :");
-                    scanf("%s", icecream[n]);
+                    scanf("%s", icecream[i]);
+                }
+            }
             break;
         }
+    
         case 2:{
-            
-        }
 
+            printf("<<==============================================>>\n");
+        
+            break;
     }
   
 
@@ -105,10 +115,15 @@ int main(){
 
 
 
-    }while (op !=5);
-    {
-        /* code */
-    }
+    }while (op !=4);
+    
+        
+    
     
 
 }
+    }
+}
+
+
+    
