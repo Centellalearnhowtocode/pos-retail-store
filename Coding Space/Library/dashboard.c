@@ -1,16 +1,5 @@
 #include <gtk/gtk.h>
-#include <stdio.h>
-void load_css(void) {
-    GtkCssProvider *provider = gtk_css_provider_new();
-    GdkDisplay *display = gdk_display_get_default();
-    GdkScreen *screen = gdk_display_get_default_screen(display);
-
-    gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-    gtk_css_provider_load_from_path(provider, "style.css", NULL);
-    g_object_unref(provider);
-}
-
-GtkWidget* create_numpad() {
+    GtkWidget* create_numpad() {
     GtkWidget *grid = gtk_grid_new();
     gtk_grid_set_row_homogeneous(GTK_GRID(grid), TRUE);
     gtk_grid_set_column_homogeneous(GTK_GRID(grid), TRUE);
@@ -75,5 +64,21 @@ int main(int argc, char *argv[]) {
 
     gtk_widget_show_all(window);
     gtk_main();
+
+     /// CSS
+    GtkCssProvider *provider = gtk_css_provider_new();
+    gtk_css_provider_load_from_path(provider, "style.css", NULL);
+
+    gtk_style_context_add_provider_for_display(
+        gdk_display_get_default(),
+        GTK_STYLE_PROVIDER(provider),
+        GTK_STYLE_PROVIDER_PRIORITY_USER
+    );
+
+    g_object_unref(provider);
+
+    // Show window
+    gtk_widget_show_all(window);
     return 0;
+
 }

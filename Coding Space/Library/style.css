@@ -16,14 +16,14 @@ window {
 }
 
 #btn-login {
-    background:#7fb069; /* Green */
+    background:#41b60b; /* Green */
     color: black;
     border-radius: 8px;
     font-weight: bold;
 }
 
 #btn-logout {
-    background:palevioletred; /* Red */
+    background:palevioletred; /*Pink */
     color: white;
     border-radius: 8px;
     font-weight: bold;}
