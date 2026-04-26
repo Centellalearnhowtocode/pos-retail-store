@@ -1,5 +1,5 @@
 #include <gtk/gtk.h>
-
+#include <stdio.h>
 void load_css(void) {
     GtkCssProvider *provider = gtk_css_provider_new();
     GdkDisplay *display = gdk_display_get_default();
