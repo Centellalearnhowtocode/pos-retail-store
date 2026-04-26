@@ -23,7 +23,60 @@ window {
 }
 
 #btn-logout {
-    background:#c1121f; /* Red */
+    background:palevioletred; /* Red */
     color: white;
     border-radius: 8px;
     font-weight: bold;}
+
+window { background-color: #d3d3d3; }
+
+#header-bar {
+    background-color: #002b36;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+}
+
+#left-panel { padding: 20px; }
+
+#right-panel {
+    background-color: #fdf6e3;
+    border-left: 2px solid #002b36;
+    min-width: 350px;
+}
+
+#order-area {
+    padding: 10px;
+    color: #333;
+    font-family: monospace;
+}
+
+button {
+    background-color: #6d9bb9;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin: 2px;
+}
+
+button:hover { background-color: #5a83a0; }
+
+#btn-pos {
+    background-color: white;
+    color: #002b36;
+    border: 1px solid #002b36;
+    border-radius: 0;
+}
+
+#btn-void {
+    background-color: #c0292f;
+    color: white;
+    border-radius: 0;
+}
+
+#btn-submit {
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 0;
+}
+
