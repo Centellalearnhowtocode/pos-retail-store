@@ -51,7 +51,7 @@ window {
 
 button {
     background-color: #6d9bb9;
-    color: white;
+    color: black;
     border-radius: 10px;
     border: none;
     margin: 2px;
@@ -68,13 +68,13 @@ button:hover { background: #5a83a0; }
 
 #btn-void {
     background: #c0292f;
-    color: white;
+    color: black;
     border-radius: 0;
 }
 
 #btn-submit {
     background: #5cb85c;
-    color: white;
+    color: black;
     border-radius: 0;
 }
 
