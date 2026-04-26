@@ -1,29 +1,29 @@
 window {
-  background: #003049; /* Dark Navy Blue */
+  background: #003049; 
 }
 
 #pos-title {
-    color: #8ecae6; /*Blue Sky*/
+    color: #8ecae6; 
     font-size: 18px;
     font-weight: bold;
 }
 
 #pos-input {
-    background: #fefae0; /* Creamy White */
+    background: #fefae0; 
     border-radius: 10px;
     padding: 10px;
     border: none;
 }
 
 #btn-login {
-    background:#41b60b; /* Green */
+    background:#6DBC66; 
     color: black;
     border-radius: 8px;
     font-weight: bold;
 }
 
 #btn-logout {
-    background:palevioletred; /*Pink */
+    background:#780000; 
     color: white;
     border-radius: 8px;
     font-weight: bold;}
@@ -35,7 +35,8 @@ window {
     font-weight: bold;
 }
 
-#left-panel { padding: 20px; }
+#left-panel { 
+    padding: 20px; }
 
 #right-panel {
     background-color: #fdf6e3;
@@ -67,7 +68,7 @@ button:hover { background: #566e56; }
 }
 
 #btn-void {
-    background: #c0292f;
+    background: #780000;
     color: black;
     border-radius: 0;
 }
