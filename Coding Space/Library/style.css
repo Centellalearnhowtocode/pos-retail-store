@@ -39,7 +39,7 @@ window {
     padding: 20px; }
 
 #right-panel {
-    background-color: #fdf6e3;
+    background: #fdf6e3;
     border-left: 2px solid #002b36;
     min-width: 350px;
 }
@@ -51,7 +51,7 @@ window {
 }
 
 button {
-    background-color: #6d9bb9;
+    background: #6d9bb9;
     color: black;
     border-radius: 10px;
     border: none;

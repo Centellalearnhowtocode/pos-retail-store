@@ -1,7 +1,6 @@
 #include <gtk/gtk.h>
 #include <stdio.h>
 
-// 1. Define load_css at the top so main can see it
 void load_css(void) {
     GtkCssProvider *provider = gtk_css_provider_new();
     GdkDisplay *display = gdk_display_get_default();
@@ -29,7 +28,7 @@ GtkWidget* create_numpad() {
 
     for (int i = 0; i < 20; i++) {
         GtkWidget *btn = gtk_button_new_with_label(labels[i]);
-        // Set CSS names for colors
+     
         if (g_strcmp0(labels[i], "Void") == 0) {
             gtk_widget_set_name(btn, "btn-void");
         } else if (g_strcmp0(labels[i], "Submit") == 0) {
@@ -78,7 +77,7 @@ int main(int argc, char *argv[]) {
     }
     gtk_box_pack_start(GTK_BOX(content_hbox), left_grid, TRUE, TRUE, 20);
 
-    // Checkout box dak display sin  function ter ot toan
+    // Checkout box dak display sin function ter ot toan
     GtkWidget *right_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
     gtk_widget_set_name(right_vbox, "right-panel");
     
