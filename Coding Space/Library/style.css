@@ -29,7 +29,7 @@ window {
     font-weight: bold;}
 
 #header-bar {
-    background-color: #002b36;
+    background: #002b36;
     color: white;
     padding: 15px;
     font-weight: bold;
