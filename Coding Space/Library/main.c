@@ -39,9 +39,9 @@ static Product products[] = {
 };
 
 static Staff staff_list[] = {
-    {"1001", "Soksa"},
-    {"1002", "Cashier"},
-    {"admin", "Admin"}
+    {"1001", "Soksan"},
+    {"1002", "Chornay"},
+    {"admin", "Rith"}
 };
 
 typedef struct {
@@ -388,11 +388,9 @@ static GtkWidget *create_login_screen(AppData *app) {
     GtkWidget *fixed = gtk_fixed_new();
     add_class(fixed, "app-bg");
 
-    //Log in from container
-    GtkWidget *card = make_fixed_panel("login-card", 300, 200);
+    GtkWidget *card = make_fixed_panel("login-card", 206, 151);
     gtk_fixed_put(GTK_FIXED(fixed), card, 285, 181);
 
-    //Margin around 
     GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 7);
     gtk_widget_set_margin_top(box, 20);
     gtk_widget_set_margin_bottom(box, 16);
@@ -400,12 +398,10 @@ static GtkWidget *create_login_screen(AppData *app) {
     gtk_widget_set_margin_end(box, 13);
     gtk_container_add(GTK_CONTAINER(card), box);
 
-    //Tittle 
     GtkWidget *title = make_label("Retail Store POS", 0);
     add_class(title, "login-title");
     gtk_box_pack_start(GTK_BOX(box), title, FALSE, FALSE, 0);
 
-    //Entry box
     app->staff_entry = gtk_entry_new();
     add_class(app->staff_entry, "cream-entry");
     gtk_entry_set_placeholder_text(GTK_ENTRY(app->staff_entry), "");
@@ -418,11 +414,10 @@ static GtkWidget *create_login_screen(AppData *app) {
     GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 5);
     gtk_box_pack_start(GTK_BOX(box), row, FALSE, FALSE, 0);
 
-/// log in button
     GtkWidget *login_button = gtk_button_new_with_label("Log in");
     add_class(login_button, "green-button");
     gtk_box_pack_start(GTK_BOX(row), login_button, TRUE, TRUE, 0);
-///log out button
+
     GtkWidget *exit_button = gtk_button_new_with_label("Log out");
     add_class(exit_button, "red-button");
     gtk_box_pack_start(GTK_BOX(row), exit_button, TRUE, TRUE, 0);
@@ -448,7 +443,7 @@ static GtkWidget *create_product_card(AppData *app, int index) {
     gtk_widget_set_valign(box, GTK_ALIGN_CENTER);
     gtk_container_add(GTK_CONTAINER(button), box);
 
-    GtkWidget *photo = gtk_label_new("Photo");
+    GtkWidget *photo = gtk_label_new("Add to cart");
     add_class(photo, "product-photo");
     gtk_box_pack_start(GTK_BOX(box), photo, FALSE, FALSE, 0);
 
@@ -685,21 +680,21 @@ static GtkWidget *create_pos_screen(AppData *app) {
     refresh_order_list(app);
     return fixed;
 }
-//CSS 
+
 static void load_css(void) {
     const char *css =
-        "window { background-color: #d7d7d7; }"
-        ".app-bg { background-color: #d7d7d7; }"
+        "window { background-color: #669bbcff; }"
+        ".app-bg { background-color: #383b52; }"
         ".top-bar { background-color: #00384f; }"
-        ".header-small { color: #ffffff; font-size: 10px; }"
+        ".header-small { color: #130127; font-size: 10px; }"
         ".product-area { background-color: #d7d7d7; }"
         ".bottom-bar { background-color: #00384f; }"
-        ".product-card { background-image:url("Coffee.jpg"); background-color: #ffffff; border: 0; border-radius: 13px; color: #00384f; }"
+        ".product-card { background-image:url('Retail.jpg') ; background-size: cover; background-position: center; background-color: #ffffff; border: 0; border-radius: 13px; color: #00384f; }"
         ".product-card:hover { background-color: #f9f9f9; }"
         ".product-selected { background-color: #c7c66a; }"
         ".product-photo { color: #00384f; font-size: 16px; }"
-        ".product-sub { color: #00384f; font-size: 7px; }"
-        ".product-price { color: #00384f; font-size: 7px; }"
+        ".product-sub { color: #00384f; font-size: 10px; font-weight: bold; }"
+        ".product-price {color: #21d648;font-size: 11px;  font-weight: bold; }"
         ".selected-item { color: #00384f; font-size: 10px; }"
         ".category-button { background-image: none; background-color: #ffffff; color: #00384f; border: 0; border-radius: 0; font-size: 10px; }"
         ".receipt-bg { background-color: #fff1cf; }"
@@ -715,8 +710,8 @@ static void load_css(void) {
         ".key-green { background-image: none; background-color: #63be63; color: #ffffff; border: 0; border-radius: 0; font-size: 9px; }"
         ".receipt-text { background-color: #fff1cf; color: #00384f; font-family: monospace; font-size: 10px; padding: 8px; }"
         ".login-card { background-color: #00384f; border-radius: 14px; }"
-        ".login-title { color: #72aeca; font-size: 10px; font-weight: bold; }" //log in title class
-        ".small-login-label { color: #8fc2dc; font-size: 10px; }"
+        ".login-title { color: #72aeca; font-size: 10px; font-weight: bold; }"
+        ".small-login-label { color: #8fc2dc; font-size: 6px; }"
         ".cream-entry { background-image: none; background-color: #fff2d2; color: #000000; border-radius: 6px; border: 0; padding: 10px; }"
         ".green-button { background-image: none; background-color: #63be63; color: #000000; border-radius: 3px; border: 0; font-size: 10px; }"
         ".red-button { background-image: none; background-color: #df0617; color: #000000; border-radius: 3px; border: 0; font-size: 10px; }";
