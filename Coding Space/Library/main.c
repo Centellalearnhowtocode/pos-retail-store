@@ -16,7 +16,6 @@ typedef struct {
     const char *subtitle;
     double price;
 } Product;
-
 typedef struct {
     const char *id;
     const char *name;
@@ -41,7 +40,10 @@ static Product products[] = {
 static Staff staff_list[] = {
     {"1001", "Soksan"},
     {"1002", "Chornay"},
-    {"admin", "Rith"}
+    {"1003", "Channak"},
+    {"1004", "Lyheang"},
+    {"1005", "Rith"},
+    {"admin", "Admin"}
 };
 
 typedef struct {
@@ -96,7 +98,8 @@ static GtkWidget *make_fixed_panel(const char *class_name, int width, int height
 
 static const Staff *find_staff_by_id(const char *id) {
     for (guint i = 0; i < G_N_ELEMENTS(staff_list); i++) {
-        if (g_strcmp0(staff_list[i].id, id) == 0) {
+        if (g_strcmp0(staff_list[i].id, id) == 0
+    ) {
             return &staff_list[i];
         }
     }
@@ -422,7 +425,7 @@ static GtkWidget *create_login_screen(AppData *app) {
     add_class(exit_button, "red-button");
     gtk_box_pack_start(GTK_BOX(row), exit_button, TRUE, TRUE, 0);
 
-    app->login_status_label = make_label("Use Staff ID: 1001, 1002, or admin", 0);
+    app->login_status_label = make_label("Use Staff ID: 1001, 1002, 1003, 1004, 1005 or admin", 0);
     add_class(app->login_status_label, "small-login-label");
     gtk_box_pack_start(GTK_BOX(box), app->login_status_label, FALSE, FALSE, 0);
 
@@ -683,7 +686,7 @@ static GtkWidget *create_pos_screen(AppData *app) {
 
 static void load_css(void) {
     const char *css =
-        "window { background-color: #669bbcff; }"
+        "window { background-color: #d7d7d7; }"
         ".app-bg { background-color: #383b52; }"
         ".top-bar { background-color: #00384f; }"
         ".header-small { color: #130127; font-size: 10px; }"
@@ -704,7 +707,7 @@ static void load_css(void) {
         ".order-discount { color: #00384f; font-size: 6px; }"
         ".totals-bg { background-color: #fffaf0; border-top: 4px solid #00384f; }"
         ".tiny-text { color: #00384f; font-size: 7px; }"
-        ".key-button { background-image: none; background-color: #ffffff; color: #00384f; border: 0; border-radius: 0; font-size: 9px; }"
+        ".key-button { background-image: none; background-color: #ffffff;ss color: #00384f; border: 0; border-radius: 0; font-size: 9px; }"
         ".key-button:hover { background-color: #edf6fb; }"
         ".key-red { background-image: none; background-color: #df0617; color: #00384f; border: 0; border-radius: 0; font-size: 9px; }"
         ".key-green { background-image: none; background-color: #63be63; color: #ffffff; border: 0; border-radius: 0; font-size: 9px; }"
