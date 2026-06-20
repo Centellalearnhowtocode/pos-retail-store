@@ -1,6 +1,9 @@
+<<<<<<< Updated upstream
  {"1001", "Soksan"},
     {"1002", "Chornay"},
     {"1003", "Nak"},
     {"1004", "Rith"},
     {"1005", "Lyheang"},
     {"admin", "Admin"},
+=======
+>>>>>>> Stashed changes
